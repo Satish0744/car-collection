@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Inter',sans-serif;
+  background:#0a0a0a; color:#f5f5f5;
+  overflow-x:hidden;
+}
+::-webkit-scrollbar { width:8px; }
+::-webkit-scrollbar-track { background:#111; }
+::-webkit-scrollbar-thumb { background:#d4af37; border-radius:4px; }
+
+.text-gold {
+  background: linear-gradient(135deg,#f0d060 0%,#d4af37 50%,#a67c00 100%);
+  -webkit-background-clip:text; background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.glass {
+  background:rgba(26,26,26,0.7);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(212,175,55,0.2);
+}
+.btn-gold { @apply px-6 py-3 bg-lux-gold text-lux-black font-semibold rounded-lg hover:bg-lux-goldLight transition-all duration-300; }
+.btn-outline { @apply px-6 py-3 border-2 border-lux-gold text-lux-gold font-semibold rounded-lg hover:bg-lux-gold hover:text-lux-black transition-all duration-300; }
+.input-lux { @apply w-full px-4 py-3 bg-lux-card border border-lux-border rounded-lg text-lux-text placeholder-lux-muted focus:border-lux-gold focus:outline-none transition; }
+.card-lux { @apply bg-lux-card border border-lux-border rounded-2xl overflow-hidden; }
